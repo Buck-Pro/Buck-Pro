@@ -5,34 +5,104 @@ font-family: 'Source Sans Pro', sans-serif;
 body {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+  background-color: grey;
+}
+
+.container {
   width: 100%;
-  height: 100vh;
+  max-width: 1400px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: white;
   box-sizing: border-box;
 }
-.container {
-  display: grid;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  grid-template-columns: repeat(15, 1fr);
-  grid-template-rows: repeat(15, 1fr);
-  background-color: #393e46;
+
+.body-content {
+  padding: 1em;
+  box-sizing: border-box;
 }
-.main {
-  grid-column: 1 / 12;
-  grid-row: 1 / 11;
-  background-repeat: no-repeat;
-  background-size: contain cover;
-}
+
 img {
-    max-width: 100%;
+  max-width: 100%;
+  display: block;
 }
-.sec1 {
+
+.full-width {
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.banner {
+  position: relative;
+}
+
+.big-red {
+  font-weight: bold;
+  color: red;
+  font-size: 5em;
+}
+
+.red-block {
+  background-color: red;
+  position: absolute;
+  left: 0;
+  top: 160px;
+  width: 30px;
+  height: 50%;
+}
+
+.banner-subheading {
+  position: absolute;
+  right: 2em;
+  top: 160px;
+  max-width: 300px;
+  margin: 0;
+  font-size: 1.4em;
+}
+
+.banner-main-text {
+  position: absolute;
+  top: 85px;
+  left: 90px;
+  /* transform: translate(-50%, -50%) */
+}
+
+.padding-1 {
+  padding: 1em;
+}
+
+.flex {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  grid-column: 12 / 16;
-  grid-row: 1 / 15;
-  background-color: #222831;
+}
+
+.body-content {
+  width: 100%;
+}
+
+.sidebar {
+  background-color: green;
+  width: 350px;
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  
+}
+
+@media (max-width: 600px) {
+  .flex {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+  }
+  .big-red {
+    font-size: 3em;
+  }
+  .red-block {
+    top: 100px;
+  }
 }
